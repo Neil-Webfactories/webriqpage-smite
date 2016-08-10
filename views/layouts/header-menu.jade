@@ -1,30 +1,27 @@
 .container#mainNav.navbar.navbar-default.navbar-fixed-top
-  ul#gn-menu.gn-menu-main
-    li.gn-trigger
-      a(class="gn-icon gn-icon-menu")
-        span Menu
-      nav.gn-menu-wrapper
-        div.gn-scroller
-          ul.gn-menu
-            li
-              a(href="#first", class="gn-icon gn-icon-help") Home
-            li
-              a(href="#about", class="gn-icon gn-icon-download") About
-            li
-              a(href="#works" class="gn-icon gn-icon-pictures") Works
-            li
-              a(href="#last" class="gn-icon gn-icon-archive") Contact
-            li.social-media
-              ul.company-social
-                - each item  in records.socials.social
-                    li(class="social-" + item.name.toLowerCase())
-                      a(href=item.path, target="_blank")!= item.icon 
+	ul#gn-menu.gn-menu-main
+		li.gn-trigger
+			a(class="gn-icon gn-icon-menu")
+				span Menu
+			nav.gn-menu-wrapper
+				div.gn-scroller
+					ul.gn-menu
+						li
+							a(href="#first", class="gn-icon gn-icon-help") Home
+						li
+							a(href="#about", class="gn-icon gn-icon-download") About
+						li
+							a(href="#works" class="gn-icon gn-icon-pictures") Works
+						li
+							a(href="#last" class="gn-icon gn-icon-archive") Contact
+						li.social-media
+							ul.company-social
+								- each item  in records.socials.social
+										li(class="social-" + item.name.toLowerCase())
+											a(href=item.path, target="_blank")!= item.icon 
 
-    li
-      a(href="index.html") LOGO HERE
-    li
-      ul.company-social
-        - each item  in records.socials.social
-            li(class="social-" + item.name.toLowerCase())
-              a(href=item.path, target="_blank")!= item.icon
-      
+		li
+			a(href="index.html") LOGO HERE
+		li
+			ul.company-social
+

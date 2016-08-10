@@ -24,26 +24,23 @@ module.exports =
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
     css_pipeline(files: 'assets/css/*.styl')
-  ]
+  ] 
 
   extensions: [
     records(
       characters: { file: "data/characters.json" }
-      socials: { file: "data/socials.json" }
       site: { file: "data/site.json" }
-    ),
-    roots_rss_generator(
-      folder: "pages"
-      output: "./public/feed.xml"
-      maxcount: 5
-      settings:
-        title: "New title"
-        feed_url: "https://smite.netlify.com/feed.xml"
-        description: "This is new description"
+      socials: { file: "data/socials.json" }
     ),
     collections(folder: 'pages', layout: 'page'),
     js_pipeline(files: 'assets/js/*.coffee'),
-    css_pipeline(files: 'assets/css/*.styl')
+    css_pipeline(files: 'assets/css/*.styl'),
+    roots_rss_generator(
+      folder: "pages"
+      output: "feed.xml"
+      settings:
+        site_url: "https://smite.netlify.com"
+      )
   ]
 
   'coffee-script':
