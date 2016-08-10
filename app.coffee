@@ -34,7 +34,7 @@ module.exports =
     ),
     roots_rss_generator(
       folder: "pages"
-      output: "feed.xml"
+      output: "./public/feed.xml"
       maxcount: 5
       settings:
         title: "New title"
