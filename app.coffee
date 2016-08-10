@@ -33,7 +33,7 @@ module.exports =
       site: { file: "data/site.json" }
     ),
     roots_rss_generator(
-      folder: "posts"
+      folder: "pages"
       output: "feed.xml"
       maxcount: 5
       settings:
